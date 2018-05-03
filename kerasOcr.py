@@ -26,8 +26,8 @@ nb_conv = 3
 # Load letters data
 imgHeight, imgWidth = 100, 100
 downsampleFactor = 4
-train_path = 'C:/Users/bbhig/Documents/Spring 2018/Computer Vision/final proj/graydata/train/'#'/mnt/c/Users/bbhig/Documents/Spring 2018/Computer Vision/final proj/graydata/train/'
-test_path = 'C:/Users/bbhig/Documents/Spring 2018/Computer Vision/final proj/graydata/test/'#'/mnt/c/Users/bbhig/Documents/Spring 2018/Computer Vision/final proj/graydata/test/'
+train_path = 'C:/Users/bbhig/Documents/Spring 2018/Computer Vision/final proj/graydata2/train/'#'/mnt/c/Users/bbhig/Documents/Spring 2018/Computer Vision/final proj/graydata/train/'
+test_path = 'C:/Users/bbhig/Documents/Spring 2018/Computer Vision/final proj/graydata2/test/'#'/mnt/c/Users/bbhig/Documents/Spring 2018/Computer Vision/final proj/graydata/test/'
 
 trainFilesList = [f for f in listdir(train_path) if isfile(join(train_path, f))]
 testFilesList = [f for f in listdir(test_path) if isfile(join(test_path, f))]
@@ -113,7 +113,7 @@ model.compile(loss='categorical_crossentropy', optimizer='adadelta', metrics=["a
 
 # Save models
 save_dir = os.path.join(os.getcwd(), 'models')
-model_name = 'ocr.{epoch:03d}.h5'
+model_name = 'ocrV2.{epoch:03d}.h5'
 if not os.path.isdir(save_dir):
     os.makedirs(save_dir)
 filepath = os.path.join(save_dir, model_name)
